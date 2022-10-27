@@ -1,0 +1,7 @@
+
+.MenuBarContent{
+    color: blanchedalmond;
+}
+.MenuBarContent:hover {
+    color: brown;
+}

@@ -1,0 +1,8 @@
+.main-cart{
+    position: relative;
+}
+.btn-cart{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
