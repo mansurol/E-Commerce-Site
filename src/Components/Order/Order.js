@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from 'react-bootstrap/esm/Button';
+import { Link } from 'react-router-dom';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useCart from '../Hook/useCart';
 import useProducts from '../Hook/useProducts';
@@ -11,6 +14,7 @@ const Order = () => {
     const handdleRemoveProduct = reviewProduct => {
         const rest = cart.filter(pb => pb.id !== reviewProduct.id)
         setCart(rest)
+        removeFromDb(reviewProduct.id)
     }
 
 
@@ -25,7 +29,11 @@ const Order = () => {
                     }
                 </div>
                 <div className='m-auto mt-5'>
-                <Cart cart={cart}/> 
+                <Cart cart={cart}>
+                <Link to="/inventory">
+                    <Button variant="warning"><span className='p-2'>proseed Checkout</span> </Button>
+                    </Link>
+                    </Cart> 
 
                 </div>
 

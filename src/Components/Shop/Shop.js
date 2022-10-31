@@ -5,6 +5,8 @@ import './Shop.css'
 import { addToDb} from '../../utilities/fakedb';
 import useProducts from '../Hook/useProducts';
 import useCart from '../Hook/useCart';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/esm/Button';
 const Shop = () => {
     const [viewProduct , setProduct] = useProducts()
     const [cart , setCart] = useCart ()
@@ -47,7 +49,12 @@ const Shop = () => {
 
                
                <div>
-                 <Cart cart={cart}/> 
+                <Cart cart={cart}>
+                    <Link to="/order">
+                    <Button variant="warning"><span className='p-2'>Review Order</span> </Button>
+                    </Link>
+                </Cart>
+                
                 </div>
                     
                 </div>
