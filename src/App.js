@@ -6,6 +6,8 @@ import Inventory from './Components/Manage Inventory/Inventory'
 import About from './Components/About/About'
 
 import { Routes, Route} from "react-router-dom";
+import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
 const App = () => {
   return (
     <div>
@@ -15,7 +17,9 @@ const App = () => {
        <Route path="/order" element={<Order />} />
        <Route path="/inventory" element={<Inventory/>} />
        <Route path="/about" element={<About />} />
-       <Route path="/*" element={<Shop />} />
+       <Route path="/login" element={<Login />} />
+       <Route path="/signup" element={<SignUp />} />
+
 
    </Routes>
     </div>
