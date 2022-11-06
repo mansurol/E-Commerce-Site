@@ -5,7 +5,16 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Logo from '../../images/Logo.svg'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import Button from 'react-bootstrap/esm/Button';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+  const [user] = useAuthState(auth)
+
+  const handdleSingOut = () =>{
+       signOut(auth)
+  }
     return (
         <div>
        <Navbar bg="dark" expand="lg">
@@ -18,7 +27,12 @@ const Header = () => {
     <Nav.Link as={Link} to="/order"><span className="MenuBarContent">Order</span></Nav.Link>
     <Nav.Link as={Link} to="/inventory"><span className="MenuBarContent">Manage Inventory</span></Nav.Link>
     <Nav.Link as={Link} to="/about"><span className="MenuBarContent">About</span></Nav.Link>
-    <Nav.Link as={Link} to="/login"><span className="MenuBarContent">Login</span></Nav.Link>
+    {
+      user? <Button onClick={handdleSingOut}>Sign Out</Button>:  <Nav.Link as={Link} to="/login"><span className="MenuBarContent">Login</span></Nav.Link>
+    }
+
+  
+   
 
     
     

@@ -5,18 +5,12 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-
-  apiKey: "AIzaSyC2dE0qIJ-wCjSPr-2wIsA9dkBPgaOGGps",
-
-  authDomain: "ecommerce-site-fefc9.firebaseapp.com",
-
-  projectId: "ecommerce-site-fefc9",
-
-  storageBucket: "ecommerce-site-fefc9.appspot.com",
-
-  messagingSenderId: "891727378988",
-
-  appId: "1:891727378988:web:cf9927c2d720b7312d6f89"
+    apiKey: "AIzaSyDU2Ekmu94FiRa6uAQfGlUUKuApOl2pIr0",
+    authDomain: "ewebsite-996f2.firebaseapp.com",
+    projectId: "ewebsite-996f2",
+    storageBucket: "ewebsite-996f2.appspot.com",
+    messagingSenderId: "808764091092",
+    appId: "1:808764091092:web:b8040f47ebdd7b11dda941"
 
 };
 

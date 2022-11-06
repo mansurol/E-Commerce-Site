@@ -36,7 +36,7 @@ const SignUp = () => {
     createUserWithEmailAndPassword(email,password);
    }
  if(user){
-    navigate('/shop')
+    navigate('/login')
  }
     return (
         <div className='container'>
